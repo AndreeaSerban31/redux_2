@@ -1,0 +1,116 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: none;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a,a:focus, a:hover,a:active,a:visited { color: #0b97c4; text-decoration: none; }
+
+html { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+select { width: 173px; padding: .2em 0; }
+.Button { display: block; padding: 5px 20px; background: #ff5722; border: none; box-shadow: none; color: #fff; outline: none; border-radius: 3px;  }
+.Button:hover,.Button:focus,.Button:visited { text-decoration: none; color: white; background: rgba(255,87,34,.7) }
+
+.container {  }
+.Header { width: 100%; overflow: auto; background: #112931; }
+    .MainMenu { float: left; margin: 1em;}
+    .AccountMenu { float: right; margin: 1em;}
+    .Header ul { display: flex; flex-direction: row; flex-wrap: nowrap; align-items: flex-start; justify-content: center; }
+    .Header ul a { padding: .3em 1em; display: block; }
+
+.MainContent { margin: 1em 3em;  }
+
+.Footer { width: 100%; overflow: auto; background: #112931;  }
+    .Footer ul { display: flex; flex-direction: row; flex-wrap: nowrap; align-items: flex-start; justify-content: center; }
+    .Footer ul a { padding: 1em; display: block; }
+
+.GamesCategoryNav { display: block; height: 50px;  }
+    .GamesCategoryList { display: block; width: 100%; margin: 0 auto; }
+        .GamesCategoryListItem { width:auto; padding: 5px; float: left }
+            .GameGrid {  width: 100%; float: left; margin: 0 0 50px 0; }
+                .GamesNo { font-size: 1.5rem; padding: 10px; color: #0b97c4 }
+    .Box{ display: flex; flex-flow: column; width: auto; min-width: 400px; float: left; border-radius: 3px; border: 1px solid #eee; margin: 5px; padding: 5px;}
+
+    .GameThumbnail { position: relative; display: block; float: left; margin: 10px 10px 10px 0; width: 200px; height: 230px; overflow: visible }
+        .GameVendor {  position: absolute; top: 10px; left: 10px; padding: 5px; font-size: 10px; font-weight: 100; color: white; background: #ff5722; border-radius: 2px; }
+        .GameImage{ border-radius: 5px; }
+        .GameName { font-size: 12px; width: 80%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+        .NEW { float: right; color: #ff5722; font-weight :700; font-size: 12px; line-height: 2.5 }
+        .GameDetailWrapper { position: absolute; color: white; width: 400px; height: auto; top: -10px; left: -20%; overflow-y: auto; z-index: 9; padding: 10px; max-width: 300px; font-size: 12px; background: #04334df7; cursor: pointer }
+            .CloseButton { position: relative; top: 0; right: -90%; z-index: 99; background: none; border: none; color: white; font-size: 20px; font-weight: 600; outline: none; }
+            .GameThumbnailDetail{ background: #04334d; }
+                .GameThumbnailDetailImg { display: block; float: left; }
+                .ActionWrapper { display: block; margin-top: 0; padding-top: 30px; height: 150px; width: calc( 100% - 150px ); float: left; text-align: center; }
+                .ActionWrapper .Button { margin: 10px auto; width: 110px; min-width: 100px; font-weight: 700; text-decoration: none; outline: none; }
+                .GameThumbnailDetailDescription { width: 100%; display: block; float: left; }
+
+/*POPULARITY*/
+.StarsBox { position: absolute; bottom: -10px; left: 0; width: 100%; }
+    .StarWrapper { width: 100%; overflow: hidden; }
+        .StarOverlay { position: absolute; top: 0; right: 0; height: 30px; background: #ffffffad;}
+            .StarItem { display: inline-block; width: 20px; font-size: 24px; color: orangered; }
+
+
+/*log in*/
+.LogInWrapperModal { position: relative; }
+.Close { position: absolute; width: 4em; height: 2em; margin: 1em; background: red; color: white; border: none;z-index: 999; right: 0; }
+.LogInWrapper { position: fixed; width: 100vw; height: 100vh; background: rgba(255,255,255,.8); z-index: 99; }
+    .LogInForm { width: 200px; margin: 8em auto;  background: #112931; padding: 4em; }
+        .LogInForm label { color: white; line-height: 1.5; }
+        .LogInForm input { padding: .5em 1em;  }
+            .LogIn { margin: 1em 0; float: left; padding: .5em 2em; }
+
+/*Mesase eroare*/
+.Form { display: block; padding: 1em 0; max-width: 1000px; margin: 0 auto; overflow: auto; }
+.Form h2 { padding: 0 0 1em 0;}
+.Form .Col-3 { width: 30%; float: left;}
+.Form .Col-1 { width: 100%; float: left; margin: 1em 0; }
+    .form-group { padding: .2em 0; }
+    .Form .Register { display: block; width: auto ; float: left; clear: both; margin: 1em 0; }
+    .DOB { width: 300px; float: left; }
+        .DOB .form-group { width: 18%; float: left; margin: 0 5px 0 0; }
+            .DOB select { width: 100%; min-width: 10px; }
+        .DOBNAME { width: 100%; display: block; }
+        .form-group.checkbox .field,.form-group.radio .field { width: auto; float: left; }
+    .SpecialLabel { color: #ff5722; font-size: 12px; font-weight: 700; }
+.Error { font-size: 12px; font-weight: 700; line-height: 1.4; color: #FF0000 }
